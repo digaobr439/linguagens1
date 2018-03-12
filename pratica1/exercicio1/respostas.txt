@@ -1,0 +1,19 @@
+1- C:\Program Files\Java\jdk-9.0.1
+2- C:\Program Files\Java\jdk-9.0.1\bin\
+3- no cmd usar:"javac filename(s) [options]"
+4- no cmd usar: "java filename"
+5- Variável de ambiente é uma variável de um sistema operacional que geralmente contém informações sobre o sistema, caminhos de diretórios específicos no sistema de arquivos e as preferências do utilizador. Ela pode afetar a forma como um processo se comporta, e cada processo pode ler e escrever variáveis de ambiente.
+6- Não, um usuario pode criar uma que somente ele poderá usar, ela pode ser criada num prompt e estará disponível enquanto o prompt estiver aberto ou o sistema pode criar
+7- Painel de controle > Sistema > duplo clique em Sistema
+
+Aberto as Propriedades do Sistema, clique na guia Avançado.
+ 
+Clique em Variáveis de Ambiente
+Para criar clique em Nova
+ 
+* Conforme exemplo, vamos criar uma Variável de Ambiente chamada CD atribuindo a unidade de CD-ROM no caso a ser apontada quando utilizada a variável.
+Digite as informações da variável
+ 
+Clique em Ok e Ok
+
+8- é o endereço onde o java está instalado
