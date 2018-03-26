@@ -10,8 +10,23 @@ package aula04;
  * @author 16.03378-7
  */
 public class Cliente {
-    String nome;
-    String sobrenome;
-    String cpf;
-    
+    private String nome;
+    private String sobrenome;
+    private String cpf;
+    private int idade; 
+    public Cliente(String cpf){
+        mudarCPF(cpf);
+    }
+    public boolean mudarCPF(String cpf){
+        boolean retorno = false;
+        if(validarCPF(cpf)){
+            this.cpf = cpf;
+            retorno = true;
+        }
+        return retorno;
+            
+    }
+    private boolean validarCPF(String cpf){
+    return true;
+    }
 }

@@ -1,12 +1,17 @@
 package aula04;
 
 public class Conta {
-    String numero;
+    String numeroConta;
     Cliente titular;
-    double saldo;
-    public Conta(){
-        titular = new Cliente();
+    private double saldo;
+    
+    public Conta(String cpf, String nConta){
+        this.titular = new Cliente(cpf);
+        this.saldo = 0;
+        this.numeroConta = nConta;
+        
     }
+    
     double vizualizarSaldo(){
         return (this.saldo); 
    }
