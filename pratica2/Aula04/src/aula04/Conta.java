@@ -5,16 +5,25 @@ public class Conta {
     Cliente titular;
     private double saldo;
     
-    public Conta(String cpf, String nConta){
-        this.titular = new Cliente(cpf);
+    public Conta(String cpf, String nConta, String nome, String sobrenome, int idade){
+        this.titular = new Cliente(cpf, nome, sobrenome, idade);
         this.saldo = 0;
         this.numeroConta = nConta;
         
     }
     
-    double vizualizarSaldo(){
+    public  String vizualizarSaldo(){
+        return Double.toString(this.saldo); 
+   }
+    
+    public  double getSaldo(){
         return (this.saldo); 
    }
+    
+    public String getNumeroConta(){
+        return this.numeroConta;
+    }
+    
     void depositar(double deposito){
         this.saldo += deposito;
         

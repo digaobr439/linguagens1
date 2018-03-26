@@ -11,12 +11,33 @@ package aula04;
  */
 public class Cliente {
     private String nome;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
     private String sobrenome;
     private String cpf;
     private int idade; 
-    public Cliente(String cpf){
-        mudarCPF(cpf);
+    
+    public Cliente(String cpf, String nome, String sobrenome, int idade){
+        this.cpf = cpf;
+        this.nome = nome;
+        this.idade = idade;
+        this.sobrenome = sobrenome;
     }
+    
     public boolean mudarCPF(String cpf){
         boolean retorno = false;
         if(validarCPF(cpf)){

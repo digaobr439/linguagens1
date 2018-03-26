@@ -18,9 +18,10 @@ public class Aula04 {
     public static void main(String[] args) {
         // TODO code application logic here
         double saldo;
-        Conta c1 = new Conta("138.368.848-99", "2884");
+        //Conta(String cpf, String nConta, String nome, String sobrenome, int idade)
+        Conta c1 = new Conta("138.368.848-99", "2884","Glauber", "Silva", 69);
         
-        Conta minhaConta = new Conta("238.368.848-99", "3884");
+        Conta minhaConta = new Conta("238.368.848-99", "3884","Glauber", "Silva", 69);
         
         c1.depositar(1000);
         minhaConta.depositar(1800);
