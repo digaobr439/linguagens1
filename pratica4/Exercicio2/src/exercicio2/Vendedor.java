@@ -11,23 +11,25 @@ package exercicio2;
  *
  * @author 16.03378-7
  */
-public class Funcionário {
+public class Vendedor {
     private String nomeFuncionario;
     private double salarioBase;
     private static double vendasGlobal;
-    private static int numeroDeFuncionarios;
+    static int numeroDeFuncionarios;
     private double vendasFuncionario;
     private Gerente gerente;
     
-    public Funcionário(String nome, double salario, Gerente gerenteNovo){
-        Funcionário.numeroDeFuncionarios ++;
+    public Vendedor(String nome, double salario, Gerente gerenteNovo){
+        Vendedor.numeroDeFuncionarios ++;
+        Gerente.numeroDeFuncionarios++;
         this.nomeFuncionario = nome;
         this.salarioBase = salario;
         this.gerente = gerenteNovo;
     }
     
-    public Funcionário(){
-            Funcionário.numeroDeFuncionarios ++;
+    public Vendedor(){
+        Vendedor.numeroDeFuncionarios ++;
+        Gerente.numeroDeFuncionarios++;
         this.nomeFuncionario = new String();
     }
     
@@ -40,18 +42,18 @@ public class Funcionário {
     }
     
     public static void setVendasGlobal(double valor){
-        Funcionário.vendasGlobal += valor;
+        Vendedor.vendasGlobal += valor;
     }
     
     public static double getVendasGlobal(){
-        return Funcionário.vendasGlobal;
+        return Vendedor.vendasGlobal;
     }
     
-    public String getNomeFuncionario(){
+    public String getNomeVendedor(){
         return this.nomeFuncionario;
     }
     
-    public void setNomeFuncionario(String nome){
+    public void setNomeVendedor(String nome){
         this.nomeFuncionario = nome;
     }
     
@@ -60,7 +62,7 @@ public class Funcionário {
     }
     
     public double getComissao(){
-        return 0.05 * vendasGlobal/Funcionário.numeroDeFuncionarios;
+        return 0.05 * vendasGlobal/Vendedor.numeroDeFuncionarios;
     }
     
     public double getSalarioBase(){
@@ -72,7 +74,8 @@ public class Funcionário {
     }
     
     public void realizarVenda(double valorVenda){
-       Funcionário.vendasGlobal += valorVenda;
+       Vendedor.vendasGlobal += valorVenda;
+       Gerente.setVendasGlobal(Vendedor.vendasGlobal);
        this.vendasFuncionario += valorVenda;
     }
     

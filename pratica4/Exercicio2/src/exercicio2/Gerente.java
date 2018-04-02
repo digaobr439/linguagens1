@@ -13,11 +13,15 @@ public class Gerente {
     private String nomeGerente;
     private double salarioBase;
     private static double vendasGlobal;
-
     private double vendasGerente;
     private Gerente gerente;
-    
-    
+    static int numeroDeFuncionarios;
+    public Gerente(String nome, double salario){
+        this.nomeGerente = nome;
+        this.salarioBase = salario;
+        Vendedor.numeroDeFuncionarios++;
+        Gerente.numeroDeFuncionarios = Vendedor.numeroDeFuncionarios;
+    }
     public static void setVendasGlobal(double valor){
         Gerente.vendasGlobal += valor;
     }
@@ -50,8 +54,8 @@ public class Gerente {
     }
     
     public void realizarVenda(double valorVenda){
-       Funcionário.setVendasGlobal(valorVenda);
-       Gerente.setVendasGlobal(Funcionário.getVendasGlobal());
+       Vendedor.setVendasGlobal(valorVenda);
+       Gerente.setVendasGlobal(Vendedor.getVendasGlobal());
        this.vendasGerente += valorVenda;
     }
     
