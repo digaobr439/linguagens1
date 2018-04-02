@@ -4,6 +4,8 @@ public class Conta {
     String numeroConta;
     Cliente titular;
     private double saldo;
+    private static totalDeContas;
+    
     
     public Conta(String cpf, String nConta, String nome, String sobrenome, int idade){
         this.titular = new Cliente(cpf, nome, sobrenome, idade);
