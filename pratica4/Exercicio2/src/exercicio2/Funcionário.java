@@ -17,16 +17,34 @@ public class Funcionário {
     private static double vendasGlobal;
     private static int numeroDeFuncionarios;
     private double vendasFuncionario;
+    private Gerente gerente;
     
-    public Funcionário(String nome, double salario){
+    public Funcionário(String nome, double salario, Gerente gerenteNovo){
         Funcionário.numeroDeFuncionarios ++;
         this.nomeFuncionario = nome;
         this.salarioBase = salario;
+        this.gerente = gerenteNovo;
     }
     
     public Funcionário(){
             Funcionário.numeroDeFuncionarios ++;
         this.nomeFuncionario = new String();
+    }
+    
+    public void setGerente(Gerente gerenteNovo){
+        this.gerente = gerenteNovo;
+    }
+    
+    public Gerente getGerente(){
+        return this.gerente;
+    }
+    
+    public static void setVendasGlobal(double valor){
+        Funcionário.vendasGlobal += valor;
+    }
+    
+    public static double getVendasGlobal(){
+        return Funcionário.vendasGlobal;
     }
     
     public String getNomeFuncionario(){
