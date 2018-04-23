@@ -10,14 +10,15 @@ package ex01;
  * @author 16.03378-7
  */
 public class Funcionario {
-    protected String nomeFuncionario;
-    protected String cpf;
+    private String nomeFuncionario;
+    private String cpf;
     protected double salarioBase;
-    protected double bonus;
-    private static double vendasGlobal;
-    static int numeroDeFuncionarios;
+    private static double bonusExtra;
+    
+    
+    
     public Funcionario(String nome, double salario){
-        Funcionario.numeroDeFuncionarios ++;
+        Concessionaria.numeroFuncionarios ++;
         this.nomeFuncionario = nome;
         this.salarioBase = salario;
     }
@@ -36,13 +37,11 @@ public class Funcionario {
     public void setNomeVendedor(String nome){
         this.nomeFuncionario = nome;
     }
-    public static double getVendasGlobal(){
-        return Funcionario.vendasGlobal;
-    }
-    public double getComissaoBase(){
-        return (0.05* Funcionario.vendasGlobal/Funcionario.numeroDeFuncionarios);
+    public static double calcularBonusExtra(double vendasTotais, int numeroFuncionarios){
+        Funcionario.bonusExtra = (0.05* vendasTotais/numeroFuncionarios);
+        return Funcionario.bonusExtra;
     }
     public double getSalarioFuncionario(){
-        return (this.salarioBase+this.getComissaoBase());
+        return (this.salarioBase+ Funcionario.bonusExtra);
     }
 }
