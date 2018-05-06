@@ -10,7 +10,8 @@ package ex01;
  * @author 16.03378-7
  */
 public class Concessionaria {
-
+    protected static int numeroFuncionarios;
+    protected static double vendasDoMes;
     /**
      * @param args the command line arguments
      */

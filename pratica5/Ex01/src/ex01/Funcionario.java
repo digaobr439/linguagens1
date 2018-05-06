@@ -25,7 +25,7 @@ public class Funcionario {
     public double getSalarioBase(){
         return salarioBase;
     }
-
+    
     public void setSalarioBase(double salarioBase) {
         this.salarioBase = salarioBase;
     }
@@ -37,11 +37,14 @@ public class Funcionario {
     public void setNomeVendedor(String nome){
         this.nomeFuncionario = nome;
     }
-    public static double calcularBonusExtra(double vendasTotais, int numeroFuncionarios){
-        Funcionario.bonusExtra = (0.05* vendasTotais/numeroFuncionarios);
+    protected static double calcularBonusExtra(){
+        Funcionario.bonusExtra = (0.05* Concessionaria.vendasDoMes/Concessionaria.numeroFuncionarios);
         return Funcionario.bonusExtra;
     }
-    public double getSalarioFuncionario(){
+    public double getSalario(){
         return (this.salarioBase+ Funcionario.bonusExtra);
+    }
+    public double getComissao(){
+        return Funcionario.calcularBonusExtra();
     }
 }

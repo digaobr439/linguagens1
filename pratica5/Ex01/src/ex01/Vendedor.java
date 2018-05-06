@@ -17,7 +17,18 @@ public class Vendedor extends Funcionario{
     }
     public void realizarVenda(double valor){
         this.valorVendas += valor;
-        Concessionaria.vendasTotal += valor;
+        Concessionaria.vendasDoMes += valor;
     }
-
+    public double calcularComissao(double bonusExtra){
+        this.comissao = (0.02* this.valorVendas + bonusExtra);
+        return this.comissao;
+    }
+    @Override
+    public double getSalario(){
+        return (this.salarioBase+ this.calcularComissao(Funcionario.calcularBonusExtra()));
+    }
+    @Override
+    public double getComissao(){
+        return this.calcularComissao(Gerente.calcularBonusExtra());
+    }
 }
