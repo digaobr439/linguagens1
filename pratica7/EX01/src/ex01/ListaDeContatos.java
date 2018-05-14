@@ -22,8 +22,7 @@ public class ListaDeContatos implements Imprimivel {
     @Override
     public void imprimirLista() {
         for (Contato lista1 : this.lista) {
-            System.out.println("Nome\t- Numero\t- Email");
-            System.out.println(lista1.nome + "\t- " + lista1.telefone + "\t- " + lista1.email);
+            System.out.println("Nome\t- Numero\t- Email\n"+lista1.nome + "\t- " + lista1.telefone + "\t- " + lista1.email);
         }
     }
     public void adicionarContato(Contato contato){
