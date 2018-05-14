@@ -27,6 +27,8 @@ public class EX01 {
         contatoGenerico = new Contato("Glauber","glauber@gmail.com","98458-9854");
         lista.adicionarContato(contatoGenerico);
         lista.imprimirLista();
+        lista.removerContato(contatoGenerico);
+        lista.imprimirLista();
     }
     
 }
