@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="olamundogui.FXMLDocumentController">
+    <children>
+        <Button fx:id="buttonSomar" layoutX="136.0" layoutY="108.0" onAction="#handleButtonSomarAction" prefHeight="30.0" prefWidth="30.0" text="+" />
+        <Label fx:id="label" layoutX="126.0" layoutY="59.0" minHeight="16" minWidth="69" prefHeight="24.0" prefWidth="69.0" />
+      <TextField fx:id="textField1" layoutX="27.0" layoutY="33.0" prefHeight="25.0" prefWidth="109.0" promptText="Numero 1" />
+      <Text layoutX="107.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculadora v0.1" wrappingWidth="109.0" />
+      <TextField fx:id="textField2" layoutX="195.0" layoutY="33.0" prefHeight="25.0" prefWidth="109.0" promptText="Numero 2" />
+      <Button fx:id="buttonSubtrair" layoutX="168.0" layoutY="108.0" mnemonicParsing="false" onAction="#handleButtonSubtrairAction" prefHeight="30.0" prefWidth="30.0" text="-" />
+      <Button fx:id="buttonDividir" layoutX="168.0" layoutY="138.0" mnemonicParsing="false" onAction="#handleButtonDividirAction" prefHeight="30.0" prefWidth="30.0" text="/" />
+      <Button fx:id="buttonMultiplicar" layoutX="136.0" layoutY="138.0" mnemonicParsing="false" onAction="#handleButtonMultiplicarAction" prefHeight="30.0" prefWidth="30.0" text="*" />
+    </children>
+</AnchorPane>
