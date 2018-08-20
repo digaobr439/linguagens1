@@ -9,11 +9,12 @@
 
 <AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="agendagui.FXMLDocumentController">
     <children>
-        <Button fx:id="button" layoutX="212.0" layoutY="31.0" onAction="#handleButtonAction" text="Cadastrar" />
+        <Button fx:id="button" layoutX="210.0" layoutY="44.0" onAction="#handleButtonAction" text="Cadastrar" />
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <Text layoutX="43.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados do novo Contato" />
       <TextField fx:id="txtNome" layoutX="14.0" layoutY="44.0" promptText="Nome:" />
       <TextField fx:id="txtEmail" layoutX="14.0" layoutY="75.0" promptText="Email:" />
       <TextField fx:id="txtTelefone" layoutX="14.0" layoutY="108.0" promptText="Telefone:" />
+      <Button layoutX="196.0" layoutY="108.0" mnemonicParsing="false" text="Exibir Contatos" />
     </children>
 </AnchorPane>
